@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Group = ExpandesClass.Group;
+using System.Dynamic;
+using System.Reflection;
 
 namespace Expandes
 {
@@ -33,9 +35,20 @@ namespace Expandes
                 }
             }
         }
+        
         static Lesson CreateLesson()
         {
-            return new Lesson(CreateDiscipline(), CreateEmployee(), CreateGroup(), CreatePair(), CreateLessonType());
+            Discipline discipline = CreateDiscipline();
+            Employee employee = CreateEmployee();
+            Group group = CreateGroup();
+            Pair pair = CreatePair();
+            LessonType lessonType = CreateLessonType();
+
+            return new Lesson(discipline, employee, group, pair, lessonType);
+        }
+        static void PrintInf()
+        {
+            Console.WriteLine();
         }
         static Pair CreatePair()
         {

@@ -17,5 +17,10 @@ namespace ExpandesClass
             this.otch = otch;
             this.post = post;
         }
+
+        internal dynamic ToExpando()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

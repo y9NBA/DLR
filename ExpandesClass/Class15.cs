@@ -31,5 +31,10 @@ namespace ExpandesClass
             this.special = special;
             this.employee = employee;
         }
+
+        internal dynamic ToExpando()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

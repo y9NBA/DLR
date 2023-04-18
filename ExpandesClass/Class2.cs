@@ -25,6 +25,12 @@ namespace ExpandesClass
         public TimeSpan EndingP { get => endingP; }
         public TimeSpan BeginningsBreak { get => beginningsBreak; }
         public TimeSpan EndingBreak { get => endingBreak; }
+
+        internal dynamic ToExpando()
+        {
+            throw new NotImplementedException();
+        }
+
         public Shift Shift_ { get => shift; }
         public Pair(TimeSpan beginningsP, TimeSpan endingP, TimeSpan beginningsBreak, TimeSpan endingBreak, Shift shift)
         {

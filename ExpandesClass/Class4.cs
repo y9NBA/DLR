@@ -16,5 +16,10 @@ namespace ExpandesClass
             this.name = name;
             this.abbreviation = abbreviation;
         }
+
+        internal dynamic ToExpando()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

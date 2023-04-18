@@ -10,5 +10,10 @@ namespace ExpandesClass
         {
             this.name = name;
         }
+
+        internal dynamic ToExpando()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
